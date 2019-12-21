@@ -1,1 +1,42 @@
-a + (a + b) + (a +b^2) + .. 
+\documentclass[12pt]{article}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\begin{document}
+\[
+\begin{array}{lllllll}S_n =& a &+ (a + b) &+ (a + 2b) &+ \ldots  &+ \left(a+ \left(n-1\right) b\right) &+ (a+nb) 
+\\
+S_n =& (a+nb) &+ (a + (n-1)b) &+ \ldots &+ (a + 2b ) &+ (a + b) &+ a 
+\\
+====& ===== & ===== & ===== &=====&====&=== 
+\\
+\text{sum}
+\\
+====& ===== & ===== & ===== &=====&====&=== 
+\\
+2*S_n =& (2a+nb) &+ (2a+nb) &+ (2a+nb) &+ (2a+nb) \ldots &+ (2a+nb) &+ (2a+nb) 
+\\
+ 
+\\
+2*S_n =& (2a+b*n) &*& (n + 1 )
+\\
+\\
+S_n(a,b) =& \cfrac {(2a+b*n) * (n + 1) } {2}
+\\
+====& ===== & ===== & ===== &=====&====&=== 
+\\
+\text{for example}
+\\
+====& ===== & ===== & ===== &=====&====&=== 
+\\
+S_n(0,1) =& 0 &+ 1 &+ 2 &+ \ldots  &+ 99 &+ 100
+\\
+S_n(0,1) =& \cfrac {n * (n + 1)}{2}
+
+ \end{array}
+\]
+\end{document}
